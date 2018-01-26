@@ -10,7 +10,6 @@ from attendance_app import models
 import bcrypt
 
 @app.route('/',methods=['GET'])
-@util.authenticate_app
 def greet():
     return 'Test Server Student-App'
 
