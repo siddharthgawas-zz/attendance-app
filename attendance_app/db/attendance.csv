@@ -1,0 +1,15 @@
+id,course_id,sem_no,subject_id,roll_no,subject_type,date_of_attendance,lecture_starttime,att_status,year,username
+1,1,6,1,15ce01,practical,10/02/2018,9:00AM,P,2018,Nitish
+2,1,6,2,15ce01,theory,10/02/2018,11.00AM,P,2018,Ruchi
+3,1,6,3,15ce01,theory,10/02/2018,11.00AM,A,2018,Nehal
+4,1,6,1,15ce18,tutorial,09/02/2018,11.00AM,A,2018,Nitish
+5,1,6,4,15ce18,theory,09/02/2018,09.00AM,P,2018,Nehal
+6,1,6,5,15ce18,theory,09/02/2018,11.00AM,D,2018,Ruchi
+7,1,6,1,15ce17,practical,10/02/2018,11.00AM,A,2018,Ruchi
+8,1,6,6,15ce17,theory,10/02/2018,10.00AM,A,2018,Nehal
+9,1,6,4,15ce17,tutorial,10/02/2018,10.00AM,A,2018,Nitish
+10,1,6,3,15ce17,theory,08/02/2018,11.00AM,A,2018,Nehal
+11,1,6,1,15ce02,practical,09/02/2018,11.00AM,A,2018,Ruchi
+12,1,6,6,15ce02,theory,08/02/2018,10.00AM,A,2018,Nehal
+13,1,6,4,15ce02,tutorial,08/02/2018,10.00AM,A,2018,Nitish
+14,1,6,3,15ce02,theory,10/02/2018,11.00AM,A,2018,Nehal
