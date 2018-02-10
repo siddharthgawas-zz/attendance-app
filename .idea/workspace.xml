@@ -1,25 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7caf0ba6-326c-4845-a0bf-c87cf3fe8fb2" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/dbnavigator.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/attendance_app/db/attendance.csv" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/attendance_app/db/course.csv" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/attendance_app/db/faculty.csv" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/attendance_app/db/subject.csv" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/attendance_app/__init__.py" afterPath="$PROJECT_DIR$/attendance_app/__init__.py" />
-      <change beforePath="$PROJECT_DIR$/attendance_app/attendance-app.py" afterPath="$PROJECT_DIR$/attendance_app/attendance-app.py" />
-      <change beforePath="$PROJECT_DIR$/attendance_app/config.py" afterPath="$PROJECT_DIR$/attendance_app/config.py" />
-      <change beforePath="$PROJECT_DIR$/attendance_app/db/db_load.py" afterPath="$PROJECT_DIR$/attendance_app/db/db_load.py" />
-      <change beforePath="$PROJECT_DIR$/attendance_app/db/schema.db" afterPath="$PROJECT_DIR$/attendance_app/db/schema.db" />
-      <change beforePath="$PROJECT_DIR$/attendance_app/db/student.csv" afterPath="$PROJECT_DIR$/attendance_app/db/student.csv" />
-      <change beforePath="$PROJECT_DIR$/attendance_app/db/student_login.csv" afterPath="$PROJECT_DIR$/attendance_app/db/student_login.csv" />
-      <change beforePath="$PROJECT_DIR$/attendance_app/models.py" afterPath="$PROJECT_DIR$/attendance_app/models.py" />
-      <change beforePath="$PROJECT_DIR$/attendance_app/util.py" afterPath="$PROJECT_DIR$/attendance_app/util.py" />
-      <change beforePath="$PROJECT_DIR$/attendance_app/views.py" afterPath="$PROJECT_DIR$/attendance_app/views.py" />
-    </list>
+    <list default="true" id="7caf0ba6-326c-4845-a0bf-c87cf3fe8fb2" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -36,8 +18,8 @@
       <file leaf-file-name="views.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/attendance_app/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="198">
-              <caret line="11" column="0" lean-forward="true" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+            <state relative-caret-position="342">
+              <caret line="19" column="7" lean-forward="true" selection-start-line="19" selection-start-column="7" selection-end-line="19" selection-end-column="7" />
               <folding>
                 <element signature="e#0#33#0" expanded="true" />
               </folding>
@@ -79,7 +61,7 @@
         <entry file="file://$PROJECT_DIR$/attendance_app/attendance-app.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="108">
-              <caret line="6" column="0" lean-forward="true" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+              <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
               <folding>
                 <element signature="e#0#30#0" expanded="true" />
               </folding>
@@ -481,7 +463,7 @@
     <entry file="file://$PROJECT_DIR$/attendance_app/attendance-app.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="108">
-          <caret line="6" column="0" lean-forward="true" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+          <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
           <folding>
             <element signature="e#0#30#0" expanded="true" />
           </folding>
@@ -490,8 +472,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/attendance_app/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="11" column="0" lean-forward="true" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+        <state relative-caret-position="342">
+          <caret line="19" column="7" lean-forward="true" selection-start-line="19" selection-start-column="7" selection-end-line="19" selection-end-column="7" />
           <folding>
             <element signature="e#0#33#0" expanded="true" />
           </folding>
