@@ -1,28 +1,34 @@
 from attendance_app import db
 
 class StudentModel(db.Model):
-    id = db.Column(db.Integer,primary_key=True)
-    name = db.Column(db.String(255),nullable=False)
-    roll_no = db.Column(db.String(10),nullable=False,unique=True)
+    __table__ = db.Model.metadata.tables['STUDENT_TABLE']
 
-class StudentLoginModel(db.Model):
-    id = db.Column(db.Integer,primary_key=True)
-    student_id = db.Column(db.Integer,db.ForeignKey('student_model.id',ondelete='CASCADE'),nullable=False,unique=True)
-    pwd = db.Column(db.String(255),nullable=False,
-                    default='$2b$12$lgh1fNHyW2WcmBeY0h6kG.qIuKuxOW3foJ333tsoEKpQdP5OXLpWe')
-    api_token = db.Column(db.String(255),nullable=False,unique=True)
-    student = db.relationship('StudentModel',backref='login',uselist=False,lazy=True)
+    def __repr__(self):
+        return self.ROLLNO
 
-class SemesterModel(db.Model):
-    id = db.Column(db.Integer,primary_key=True)
-    name = db.Column(db.String,unique=True,nullable=False)
-    semester_code = db.Column(db.String(10),unique=True,nullable=False)
-    total_lectures = db.Column(db.Integer,nullable=False,default=0)
-    subjects = db.relationship('SubjectModel',backref='semester',lazy=True)
+class CourseModel(db.Model):
+    __table__ = db.Model.metadata.tables['COURSE_TABLE']
+
+    def __repr__(self):
+        return self.CNAME
+
+class FacultyModel(db.Model):
+    __table__ = db.Model.metadata.tables['FACULTY_TABLE']
+
+    def __repr__(self):
+        return self.FACULTYNAME
 
 class SubjectModel(db.Model):
-    id = db.Column(db.Integer,primary_key=True)
-    name=db.Column(db.String(255),unique=True,nullable=False)
-    code=db.Column(db.String(10),unique=True,nullable=False)
-    total_lectures = db.Column(db.Integer,nullable=False,default=0)
-    sem_id = db.Column(db.Integer,db.ForeignKey('semester_model.id',ondelete='SET NULL'))
+    __table__ = db.Model.metadata.tables['SUBJECT_TABLE']
+
+class AttendanceModel(db.Model):
+    __table__ = db.Model.metadata.tables['STUDENT_ATT_TABLE']
+    date_of_att = None
+
+class StudentLoginModel(db.Model):
+    __table_args__ = {'extend_existing': True}
+    username = db.Column(db.String(10),db.ForeignKey('STUDENT_TABLE.ROLLNO'
+                                               ,ondelete='CASCADE'),primary_key=True)
+    password = db.Column(db.String(255),nullable=False)
+    api_key = db.Column(db.String(255),nullable=False,unique=True)
+    student = db.relationship('StudentModel',backref='student_login',lazy=True)

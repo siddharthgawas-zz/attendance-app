@@ -1,0 +1,8 @@
+subject_id,subject_name,sem_no,course_id,lect_per_week,prac_per_week,tut_per_week,course_type
+1,Modern Algorithm Design and Foundation,6,1,3,0,0,RC07-08
+2,Object Oriented Software Engineering,6,1,3,2,0,RC07-08
+3,Artificial Intelligence,6,1,3,2,1,RC07-08
+4,Computer Graphics,6,1,3,2,1,RC07-08
+5,Device Interface and PC Maintenance,6,1,3,2,1,RC07-08
+6,Data Communications,6,1,3,2,1,RC07-08
+7,Principles of Programing,1,1,3,2,1,RC16-17
