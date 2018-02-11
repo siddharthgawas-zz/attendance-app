@@ -9,6 +9,8 @@ from http import HTTPStatus
 from attendance_app import models
 import bcrypt
 import datetime
+import hashlib
+import uuid
 
 @app.route('/',methods=['GET'])
 def greet():
@@ -143,5 +145,35 @@ def get_attendance(user_id,year,sem_no,roll_no):
 
     except KeyError:
         response = jsonify(code=400,status='Please Provide roll_no,from_date,to_date.')
+        response.status_code = HTTPStatus.BAD_REQUEST
+        return response
+
+@app.route('/change-password/<int:id>/',methods=['POST'])
+@util.authenticate_app
+@util.authenticate_user
+def change_password(user_id,id):
+    try:
+        if user_id != id:
+            return jsonify(code=401, status='Unauthorized User')
+        json_data = loads(request.data)
+        old_password = json_data['old_password']
+        new_password = json_data['new_password']
+        roll_no = models.StudentModel.query.filter_by(ID=user_id).first().ROLLNO
+        student = models.StudentLoginModel.query.filter_by(username=roll_no).first()
+        existing_password = student.password
+        if not bcrypt.checkpw(old_password.encode(), existing_password.encode()):
+            response = jsonify(status=exc.PasswordDidNotMatch.msg,
+                               code=exc.PasswordDidNotMatch.code)
+            response.status_code = HTTPStatus.UNAUTHORIZED
+            return response
+        student.password = bcrypt.hashpw(new_password.encode(), bcrypt.gensalt()).decode()
+        key = uuid.uuid4()
+        hash_sha256 = hashlib.sha256((str(key)).encode())
+        student.api_key = hash_sha256.hexdigest()
+        db.session.commit()
+        response = jsonify(code=exc.PASSWORD_CHANGED[0], status=exc.PASSWORD_CHANGED[1])
+        return response
+    except KeyError:
+        response = jsonify(code=400,status='Please Provide old_password and new_password')
         response.status_code = HTTPStatus.BAD_REQUEST
         return response
