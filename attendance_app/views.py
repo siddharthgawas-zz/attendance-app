@@ -154,7 +154,10 @@ def get_attendance(user_id,year,sem_no,roll_no):
 def change_password(user_id,id):
     try:
         if user_id != id:
-            return jsonify(code=401, status='Unauthorized User')
+            response = jsonify(code=401, status='Unauthorized User')
+            response.status_code = HTTPStatus.UNAUTHORIZED
+            return response
+
         json_data = loads(request.data)
         old_password = json_data['old_password']
         new_password = json_data['new_password']
@@ -177,3 +180,21 @@ def change_password(user_id,id):
         response = jsonify(code=400,status='Please Provide old_password and new_password')
         response.status_code = HTTPStatus.BAD_REQUEST
         return response
+
+@app.route('/get-attendance-percentile/<int:year>/<int:sem_no>/<int:id>',methods=['GET'])
+@util.authenticate_app
+@util.authenticate_user
+def get_overall_attendance_percentile(user_id,year,sem_no,id):
+    if user_id!=id:
+        response = jsonify(status="Unauthorized User",code=401)
+        response.status_code = HTTPStatus.UNAUTHORIZED
+        return response
+    roll_no = models.StudentModel.query.filter_by(ID = id).first().ROLLNO
+    attendance = models.AttendanceModel.query.filter((models.AttendanceModel.SEM_NO == sem_no) &
+                                                     (models.AttendanceModel.YEAR == year)
+                                                     & (models.AttendanceModel.ROLLNO == roll_no)).all()
+    curren_time = datetime.datetime.now().strftime("%d-%m-%Y %H:%M")
+    response = jsonify(code=200,status="Attendance Calculated",
+                       percentile=util.calculate_attendance_percentile(attendance),
+                       time_stamp=curren_time)
+    return response

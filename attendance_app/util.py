@@ -7,6 +7,7 @@ from attendance_app.config import  APPLICATION_KEY as KEY
 import re
 from attendance_app import models as models
 import datetime
+import math
 
 def authenticate_app(some_func):
     @wraps(some_func)
@@ -91,3 +92,19 @@ def get_attendance_between_dates(attendance:list,from_date:datetime.date,to_date
         attendance = att
     return attendance
     pass
+
+def calculate_attendance_percentile(attendance):
+    A_count = 0
+    P_count = 0
+    D_count = 0
+    for i in attendance:
+        mark = i.ATT_STATUS
+        if mark=='A':
+            A_count+=1
+        elif mark=='P':
+            P_count+=1
+        elif mark=='D':
+            D_count+=1
+    percentile = (P_count+D_count)/(A_count+P_count+D_count)*100
+    return float("%.2f"%percentile)
+
