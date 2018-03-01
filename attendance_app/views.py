@@ -181,7 +181,7 @@ def change_password(user_id,id):
         response.status_code = HTTPStatus.BAD_REQUEST
         return response
 
-@app.route('/get-attendance-percentile/<int:year>/<int:sem_no>/<int:id>',methods=['GET'])
+@app.route('/get-attendance-percentile/<int:year>/<int:sem_no>/<int:id>/',methods=['GET'])
 @util.authenticate_app
 @util.authenticate_user
 def get_overall_attendance_percentile(user_id,year,sem_no,id):
