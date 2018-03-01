@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7caf0ba6-326c-4845-a0bf-c87cf3fe8fb2" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/attendance_app/util.py" afterPath="$PROJECT_DIR$/attendance_app/util.py" />
       <change beforePath="$PROJECT_DIR$/attendance_app/views.py" afterPath="$PROJECT_DIR$/attendance_app/views.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -18,11 +17,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="views.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/attendance_app/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="195" column="67" lean-forward="false" selection-start-line="195" selection-start-column="67" selection-end-line="195" selection-end-column="67" />
+            <state relative-caret-position="39">
+              <caret line="183" column="72" lean-forward="false" selection-start-line="183" selection-start-column="72" selection-end-line="183" selection-end-column="72" />
               <folding />
             </state>
           </provider>
@@ -102,10 +101,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="util.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="util.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/attendance_app/util.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="269">
+            <state relative-caret-position="917">
               <caret line="108" column="34" lean-forward="false" selection-start-line="108" selection-start-column="34" selection-end-line="108" selection-end-column="34" />
               <folding>
                 <element signature="e#0#33#0" expanded="true" />
@@ -149,8 +148,8 @@
         <option value="$PROJECT_DIR$/attendance_app/models.py" />
         <option value="$PROJECT_DIR$/attendance_app/attendance-app.py" />
         <option value="$PROJECT_DIR$/attendance_app/exc_codes.py" />
-        <option value="$PROJECT_DIR$/attendance_app/views.py" />
         <option value="$PROJECT_DIR$/attendance_app/util.py" />
+        <option value="$PROJECT_DIR$/attendance_app/views.py" />
       </list>
     </option>
   </component>
@@ -773,15 +772,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/attendance_app/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="195" column="67" lean-forward="false" selection-start-line="195" selection-start-column="67" selection-end-line="195" selection-end-column="67" />
+        <state relative-caret-position="39">
+          <caret line="183" column="72" lean-forward="false" selection-start-line="183" selection-start-column="72" selection-end-line="183" selection-end-column="72" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/attendance_app/util.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="269">
+        <state relative-caret-position="917">
           <caret line="108" column="34" lean-forward="false" selection-start-line="108" selection-start-column="34" selection-end-line="108" selection-end-column="34" />
           <folding>
             <element signature="e#0#33#0" expanded="true" />
