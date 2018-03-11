@@ -193,8 +193,9 @@ def get_overall_attendance_percentile(user_id,year,sem_no,id):
     attendance = models.AttendanceModel.query.filter((models.AttendanceModel.SEM_NO == sem_no) &
                                                      (models.AttendanceModel.YEAR == year)
                                                      & (models.AttendanceModel.ROLLNO == roll_no)).all()
+    percentile, p_count, d_count, a_count = util.calculate_attendance_percentile(attendance)
     curren_time = datetime.datetime.now().strftime("%d-%m-%Y %H:%M")
     response = jsonify(code=200,status="Attendance Calculated",
-                       percentile=util.calculate_attendance_percentile(attendance),
+                       percentile=percentile,p_count=p_count,d_count=d_count,a_count=a_count,
                        time_stamp=curren_time)
     return response
