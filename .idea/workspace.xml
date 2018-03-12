@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7caf0ba6-326c-4845-a0bf-c87cf3fe8fb2" name="Default" comment="" />
+    <list default="true" id="7caf0ba6-326c-4845-a0bf-c87cf3fe8fb2" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/attendance_app/db/attendance.csv" afterPath="$PROJECT_DIR$/attendance_app/db/attendance.csv" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -38,8 +40,8 @@
       <file leaf-file-name="attendance.csv" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/attendance_app/db/attendance.csv">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="198">
-              <caret line="11" column="57" lean-forward="true" selection-start-line="11" selection-start-column="57" selection-end-line="11" selection-end-column="57" />
+            <state relative-caret-position="154">
+              <caret line="19" column="53" lean-forward="true" selection-start-line="19" selection-start-column="53" selection-end-line="19" selection-end-column="53" />
               <folding />
             </state>
           </provider>
@@ -774,8 +776,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/attendance_app/db/attendance.csv">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="11" column="57" lean-forward="true" selection-start-line="11" selection-start-column="57" selection-end-line="11" selection-end-column="57" />
+        <state relative-caret-position="154">
+          <caret line="19" column="53" lean-forward="true" selection-start-line="19" selection-start-column="53" selection-end-line="19" selection-end-column="53" />
           <folding />
         </state>
       </provider>
