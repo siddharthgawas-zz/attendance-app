@@ -105,6 +105,6 @@ def calculate_attendance_percentile(attendance):
             P_count+=1
         elif mark=='D':
             D_count+=1
-    percentile = (P_count)/(A_count+P_count-D_count)*100
+    percentile = (P_count+D_count)/(A_count+P_count+D_count)*100
     return float("%.2f"%percentile),P_count,D_count,A_count
 
