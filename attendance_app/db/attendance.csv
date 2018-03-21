@@ -26,3 +26,16 @@ id,course_id,sem_no,subject_id,roll_no,subject_type,date_of_attendance,lecture_s
 25,1,6,6,15ce18,theory,14/03/2018,9.00AM,A,2018,Ruchi
 26,1,6,2,15ce18,theory,14/03/2018,9.00AM,A,2018,Ruchi
 27,1,6,1,15ce18,theory,15/03/2018,9.00AM,P,2018,Nehal
+28,1,6,6,15ce18,theory,22/03/2018,9.00AM,A,2018,Ruchi
+29,1,6,2,15ce18,theory,22/03/2018,9.00AM,A,2018,Ruchi
+30,1,6,1,15ce18,theory,23/03/2018,9.00AM,P,2018,Ruchi
+31,1,6,6,15ce18,theory,24/03/2018,9.00AM,A,2018,Ruchi
+32,1,6,2,15ce18,theory,24/03/2018,9.00AM,A,2018,Nehal
+33,1,6,1,15ce18,theory,25/03/2018,9.00AM,P,2018,Nitish
+34,1,6,6,15ce18,theory,25/03/2018,9.00AM,A,2018,Ruchi
+35,1,6,2,15ce18,theory,26/03/2018,9.00AM,A,2018,Ruchi
+36,1,6,1,15ce18,theory,26/03/2018,9.00AM,P,2018,Nehal
+37,1,6,1,15ce18,theory,27/03/2018,9.00AM,P,2018,Nitish
+38,1,6,6,15ce18,theory,27/03/2018,9.00AM,A,2018,Ruchi
+39,1,6,2,15ce18,theory,28/03/2018,9.00AM,A,2018,Ruchi
+40,1,6,1,15ce18,theory,28/03/2018,9.00AM,P,2018,Nehal
