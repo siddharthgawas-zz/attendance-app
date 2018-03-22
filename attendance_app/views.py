@@ -118,12 +118,17 @@ def get_attendance(user_id,year,sem_no,roll_no):
             to_date = datetime.datetime.strptime(to_date, '%d-%m-%Y').date()
         except KeyError:
             to_date = None
-
+        try:
+            mark = request.args['mark']
+        except KeyError:
+            mark = None
         attendance =models.AttendanceModel.query.filter((models.AttendanceModel.SEM_NO==sem_no) &
                                                         (models.AttendanceModel.YEAR==year)
                                                     & (models.AttendanceModel.ROLLNO==roll_no))
         if subject_id is not None:
             attendance = attendance.filter_by(SUBJECTID=subject_id)
+        if mark is not None:
+            attendance = attendance.filter_by(ATT_STATUS=mark)
 
         attendance = attendance.all()
         util.convert_date_of_attendance(attendance)
