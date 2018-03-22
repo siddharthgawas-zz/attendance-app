@@ -128,7 +128,11 @@ def get_attendance(user_id,year,sem_no,roll_no):
         if subject_id is not None:
             attendance = attendance.filter_by(SUBJECTID=subject_id)
         if mark is not None:
-            attendance = attendance.filter_by(ATT_STATUS=mark)
+            if mark=='P' or mark=='D':
+                attendance = attendance.filter((models.AttendanceModel.ATT_STATUS=='P')|
+                                               (models.AttendanceModel.ATT_STATUS=='D'))
+            elif mark=='A':
+                attendance = attendance.filter((models.AttendanceModel.ATT_STATUS == 'A'))
 
         attendance = attendance.all()
         util.convert_date_of_attendance(attendance)
