@@ -199,3 +199,57 @@ def get_overall_attendance_percentile(user_id,year,sem_no,id):
                        percentile=percentile,p_count=p_count,d_count=d_count,a_count=a_count,
                        time_stamp=curren_time)
     return response
+
+@app.route('/get-attendance-details/<string:mark>/<int:year>/<int:sem_no>/<int:id>/',methods=['GET'])
+@util.authenticate_app
+@util.authenticate_user
+def get_attendance_details(user_id,mark,year,sem_no,id):
+    try:
+        from_date = request.args['from_date']
+        to_date = request.args['to_date']
+        from_date = datetime.datetime.strptime(from_date, '%d-%m-%Y').date()
+        to_date = datetime.datetime.strptime(to_date, '%d-%m-%Y').date()
+
+    except KeyError:
+        response = jsonify(status="Bad Request", code=400)
+        response.status_code = HTTPStatus.BAD_REQUEST
+        return response
+
+    if user_id != id:
+        response = jsonify(status="Unauthorized User", code=401)
+        response.status_code = HTTPStatus.UNAUTHORIZED
+        return response
+    roll_no = models.StudentModel.query.filter_by(ID=id).first().ROLLNO
+    if mark=='present':
+        attendance = models.AttendanceModel.query.filter((models.AttendanceModel.SEM_NO == sem_no) &
+                                                     (models.AttendanceModel.YEAR == year)
+                                                     & (models.AttendanceModel.ROLLNO == roll_no)
+                                                        &((models.AttendanceModel.ATT_STATUS=='P')|
+                                                          (models.AttendanceModel.ATT_STATUS == 'D'))
+                                                     )
+    elif mark=='absent':
+        attendance = models.AttendanceModel.query.filter((models.AttendanceModel.SEM_NO == sem_no) &
+                                                         (models.AttendanceModel.YEAR == year)
+                                                         & (models.AttendanceModel.ROLLNO == roll_no)
+                                                         & (models.AttendanceModel.ATT_STATUS == 'A')
+                                                         )
+
+    attendance = attendance.all()
+    util.convert_date_of_attendance(attendance)
+    attendance = util.get_attendance_between_dates(attendance, from_date, to_date)
+
+    attendance_counts = util.get_attendance_counts(attendance)
+
+    result = []
+    for a in attendance:
+        sub = models.SubjectModel.query.filter_by(SUBJECTID=a.SUBJECTID).first()
+        data = dict(id=int(a.ID), subject_name=sub.SUBJECT_NAME, subject_type=a.SUBJECT_TYPE,
+                    date_of_attendance=a.date_of_att.strftime('%d-%m-%Y'),
+                    lecture_starttime=a.LECTURE_STARTTIME,
+                    att_status=a.ATT_STATUS,
+                    faculty_name=a.USERNAME)
+        result.append(data)
+    response = jsonify(p_count=attendance_counts[0], a_count=attendance_counts[1]
+                       , d_count=attendance_counts[2],
+                       data=result, status='Attendance Results Found', code=200)
+    return response
