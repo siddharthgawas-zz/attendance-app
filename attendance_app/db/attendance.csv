@@ -82,3 +82,6 @@ id,course_id,sem_no,subject_id,roll_no,subject_type,date_of_attendance,lecture_s
 90,1,6,2,15ce18,theory,02/05/2018,11.00AM,P,2018,Ruchi
 81,1,6,3,15ce01,theory,02/05/2018,11.00AM,P,2018,Nehal
 82,1,6,1,15ce01,practical,02/05/2018,9:00AM,P,2018,Nitish
+83,1,6,2,15ce18,theory,03/05/2018,11.00AM,P,2018,Ruchi
+84,1,6,3,15ce01,theory,03/05/2018,11.00AM,P,2018,Nehal
+85,1,6,1,15ce01,practical,03/05/2018,9:00AM,P,2018,Nitish
